@@ -1,0 +1,26 @@
+@function txt-color($color) {
+      @if (lightness($color) <= 50) {
+            @return $light;
+      } @else if (lightness($color) > 50) {
+            @return $dark;
+      }
+}
+
+@function set-direction($direction) {
+      @if $direction == ltr {
+            $float-start: left; // float-start
+            $float-end: right; // float-end
+      } @else {
+            $float-start: right;
+            $float-end: left;
+      }
+}
+
+// body {
+//       direction: set-direction(ltr);
+// }
+
+@mixin set-color($color) {
+      background-color: $color;
+      color: text-color($color);
+}

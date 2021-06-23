@@ -1,0 +1,175 @@
+//! spacing utility
+
+$space: 1rem;
+
+$spaces: (
+      0:0,
+      1: $space / 4,
+      2: $space / 3,
+      3: $space / 2,
+      4: $space,
+      5: $space * 2,
+      6: $space * 3,
+      7: $space * 4,
+);
+
+//* spacing with margin
+
+@each $index, $space in $spaces {
+
+      // margin
+
+      .m-#{$index} {
+            margin: $space !important;
+      }
+
+      // margin top
+
+      .mt-#{$index} {
+            margin-top: $space !important;
+      }
+
+      // margin bottom
+
+      .mb-#{$index} {
+            margin-bottom: $space !important;
+      }
+
+      // margin start
+
+      .ms-#{$index} {
+            margin-left: $space !important;
+      }
+
+      // margin end
+
+      .me-#{$index} {
+            margin-right: $space !important;
+      }
+
+      // margin top & right
+
+      .my-#{$index} {
+            margin-top: $space !important;
+            margin-bottom: $space !important;
+      }
+
+      // margin left & right
+
+      .mx-#{$index} {
+            margin-left: $space !important;
+            margin-right: $space !important;
+      }
+}
+
+//* margin auto
+
+.mx-auto {
+      margin: auto !important;
+}
+
+//* spacing with padding
+
+@each $index, $space in $spaces {
+
+      // padding top
+
+      .pt-#{$index} {
+            padding-top: $space !important;
+      }
+
+      // padding bottom
+
+      .pb-#{$index} {
+            padding-bottom: $space !important;
+      }
+
+      // padding start
+
+      .ps-#{$index} {
+            padding-left: $space !important;
+      }
+
+      // padding end
+
+      .pe-#{$index} {
+            padding-right: $space !important;
+      }
+
+      // padding top & right
+
+      .py-#{$index} {
+            padding-top: $space !important;
+            padding-bottom: $space !important;
+      }
+
+      // padding left & right
+
+      .px-#{$index} {
+            padding-left: $space !important;
+            padding-right: $space !important;
+      }
+}
+
+//! background & color utility
+
+$colors: (
+      "light": $light,
+      "dark": $dark,
+      "winter": $winter,
+      "link": $link,
+      "warning": $warning,
+      "danger": $danger,
+      "spring": $spring,
+      "transparent": transparent,
+      );
+
+@each $name, $value in $colors {
+      .bg-#{$name} {
+            background-color: $value;
+      }
+}
+
+@each $name, $value in $colors {
+      .txt-#{$name} {
+            color: $value;
+      }
+}
+
+//! float
+
+.float-start {
+      float: left;
+}
+
+.float-end {
+      float: right;
+}
+
+.float-none {
+      float: none;
+}
+
+//! text
+
+// size
+
+@for $i from 1 through 5 {
+      .size-#{$i} {
+            font-size: 70px - (10 * $i);
+      }
+}
+
+// text align
+
+.txt-start {
+      text-align: left;
+}
+
+.txt-center {
+      text-align: center;
+}
+
+.txt-end {
+      text-align: right;
+}

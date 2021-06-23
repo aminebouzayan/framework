@@ -1,0 +1,34 @@
+%align-default {
+      margin: auto;
+      line-height: 100%;
+}
+
+%align-flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+%align-grid {
+      display: grid;
+      place-items: center;
+}
+
+%align-position {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+}
+
+%bg-shorthand {
+      width: 100%;
+      min-height: 500px;
+      background:url(...) no-repeat center/cover fixed;
+}
+
+%bg-overlay {
+      width: inherit;
+      min-height: inherit;
+      background-color: rgba(0, 0, 0, 0.425);
+}

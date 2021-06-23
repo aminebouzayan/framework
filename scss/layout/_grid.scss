@@ -1,0 +1,118 @@
+.container {
+      max-width: 80%;
+      padding: 0 1rem;
+}
+
+.container-xxs {
+      max-width: 100%;
+      @include respond-to(xs) {
+            max-width: 80%;
+      }
+}
+
+.container-xs {
+      max-width: 100%;
+      @include respond-to(sm) {
+            max-width: 80%;
+      }
+}
+
+.container-sm {
+      max-width: 100%;
+      @include respond-to(md) {
+            max-width: 80%;
+      }
+}
+
+.container-md {
+      max-width: 100%;
+      @include respond-to(lg) {
+            max-width: 80%;
+      }
+}
+
+.container-lg {
+      max-width: 100%;
+      @include respond-to(xl) {
+            max-width: 80%;
+      }
+}
+
+.container-xl {
+      max-width: 100%;
+      @include respond-to(xxl) {
+            max-width: 80%;
+      }
+}
+
+.container-xxl {
+      max-width: 100%;
+      @include respond-to(xxl) {
+            max-width: 80%;
+      }
+}
+
+@for $i from $start to $end {
+      .col-#{$i} {
+            width: ($percentage / ($cols / $i));
+      }
+      .offset-#{$i} {
+            margin-left: ($percentage / ($cols / $i));
+      }
+      @include respond-to(xxs) {
+            .col-xxs-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-xxs-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+      @include respond-to(xs) {
+            .col-xs-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-xs-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+      @include respond-to(sm) {
+            .col-sm-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-sm-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+      @include respond-to(md) {
+            .col-md-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-md-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+      @include respond-to(lg) {
+            .col-lg-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-lg-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+      @include respond-to(xl) {
+            .col-xl-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-xl-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+      @include respond-to(xxl) {
+            .col-xxl-#{$i} {
+                  width: ($percentage / ($cols / $i));
+            }
+            .offset-xxl-#{$i} {
+                  margin-left: ($percentage / ($cols / $i));
+            }
+      }
+}

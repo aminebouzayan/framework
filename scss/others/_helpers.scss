@@ -1,0 +1,31 @@
+.p-fixed {
+      position: fixed;
+}
+
+.p-sticky {
+      position: sticky;
+}
+
+.p-absolute {
+      position: absolute;
+}
+
+.p-relative {
+      position: relative;
+}
+
+.thumbnail {
+      width: 111px;
+      height: 111px;
+      padding: 11px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+}
+
+@mixin clearfix() {
+      &::after {
+            content: '';
+            clear: both;
+            display: table;
+      }
+}

@@ -1,0 +1,46 @@
+//! >=> *** base folder ***
+
+@import  	"base/reset";
+@import	"base/reboot";
+@import	"base/normalize";
+
+//! >=> *** config folder ***
+
+@import  	"config/variables";
+@import	"config/mixins";
+@import	"config/functions";
+@import	"config/placeholders";
+
+//! >=> *** others folder  ***
+
+@import	"others/helpers";
+@import	"others/utilities";
+@import	"others/typography";
+@import	"others/animations";
+
+//! >=> *** components folder ***
+
+@import	"components/accordion";
+@import	"components/buttons";
+@import	"components/carousel";
+@import	"components/dropdown";
+@import	"components/forms";
+@import	"components/modules";
+
+//! >=> *** layout folder ***
+
+@import  	"layout/header";
+@import	"layout/navbar";
+@import	"layout/grid";
+@import	"layout/sidebar";
+@import	"layout/footer";
+
+//! >=> *** pages folder ***
+
+@import  	"pages/home";
+@import	"pages/features";
+@import	"pages/faq";
+@import	"pages/contact";
+@import	"pages/about";
+
+//! >=> *** vendors folder ***

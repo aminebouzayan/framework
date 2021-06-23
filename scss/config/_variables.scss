@@ -1,0 +1,74 @@
+// main colors
+
+$link: #004cff;
+$warning: #ffbf00;
+$spring: #009966;
+$danger: #d92644;
+$winter: #33bbff;
+$dark: #404040;
+$light: #f0f2f5;
+
+// game colors
+
+$g__red: hsl(0, 100%, 50%);
+$g__orange: hsl(25, 100%, 50%);
+$g__yellow: hsl(50, 100%, 50%);
+$g__green: hsl(100, 100%, 50%);
+$g__lime: hsl(125, 100%, 50%);
+$g__greenish: hsl(150, 100%, 50%);
+$g__turquoise: hsl(175, 100%, 50%);
+$g__skyblue: hsl(200, 100%, 50%);
+$g__bluish: hsl(225, 100%, 50%);
+$g__blue: hsl(250, 100%, 50%);
+$g__blueviolet: hsl(275, 100%, 50%);
+$g__hotpink: hsl(300, 100%, 50%);
+
+// colors
+
+$red: rgb(222, 22, 22);
+$green: rgb(10, 150, 100);
+$yellow: rgb(250,195, 30);
+$orange: rgb(240, 100, 10);
+$blue: rgb(10, 100, 200);
+$indigo: rgb(100, 00, 200);
+$gray: rgb(150, 160, 170);
+$white: rgb(255, 255, 255);
+$black: rgb(0,0,0);
+
+// gray colors
+
+$gray-100:#f8f9fa;
+$gray-200:#e9ecef;
+$gray-300:#dee2e6;
+$gray-400:#ced4da;
+$gray-500:#adb5bd;
+$gray-600:#6C757D;
+$gray-700:#495057;
+$gray-800:#343a40;
+$gray-900:#212529;
+
+$link: $link;
+$warning: $warning;
+$spring: $spring;
+$danger: $danger;
+$winter: $winter;
+$dark: $dark;
+$light: $light;
+
+$breakpoints: (
+  'xxs' : (max-width: 500px),
+  'xs'  : (min-width: 500px),
+  'sm'  : (min-width: 600px),
+  'md'  : (min-width: 700px),
+  'lg'  : (min-width: 1000px),
+  'xl'  : (min-width: 1200px),
+  'xxl' : (min-width: 1400px),
+);
+
+$float-start: left;
+$float-end: right;
+
+$percentage: 100%;
+$cols: 12;
+$end : $cols + 1;
+$start: 1;
