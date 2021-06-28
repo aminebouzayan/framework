@@ -18,6 +18,11 @@
 @import	"others/typography";
 @import	"others/animations";
 
+//! >=> *** modules folder ***
+
+@import	"components/modules/switch-default";
+@import	"components/modules/switch-alternative";
+
 //! >=> *** components folder ***
 
 @import	"components/accordion";
@@ -29,9 +34,9 @@
 
 //! >=> *** layout folder ***
 
+@import	"layout/grid";
 @import  	"layout/header";
 @import	"layout/navbar";
-@import	"layout/grid";
 @import	"layout/sidebar";
 @import	"layout/footer";
 

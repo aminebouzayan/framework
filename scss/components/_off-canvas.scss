@@ -1,0 +1,45 @@
+%btn-default {
+   cursor: pointer;
+   border: 0;
+   background-color: aqua;
+   color: white;
+   transition: all 150ms linear;
+   padding: 10px 20px;
+}
+
+.default-btn {
+   font-size: 16px;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   @extend %btn-default;
+   
+   &:hover {
+         color: aqua;
+         background-color: white;
+   }
+}
+
+.off-canvas {
+   height: 100vh;
+   width: 200px;
+   background-color: purple;
+   position: absolute;
+   top: 0;
+   left: 0;
+   transform: translateX(-100%);
+   transition: all 300ms ease;
+
+   &.is-open {
+   transform: translateX(0);
+   }
+
+   li {
+         text-align: center;
+         padding: 22px;
+
+         a:visited {
+               color: ivory;
+         }
+   }
+}

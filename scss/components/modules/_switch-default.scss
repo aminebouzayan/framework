@@ -1,0 +1,32 @@
+.switch {
+   appearance: none;
+   height: 30px;
+   width: 60px;
+   background-color: darkgrey;
+   position: relative;
+   border-radius: 15px;
+   cursor: pointer;
+   outline: none;
+   transition: all 100ms linear;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5px;
+      transition: all 100ms linear;
+   }
+
+   &:checked {
+      background-color: cyan;
+
+      &::before {
+         background-color: #333;
+         left: 33px;
+      }
+   }
+}

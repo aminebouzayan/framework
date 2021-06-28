@@ -1,0 +1,116 @@
+.carousel {
+   width: 1015px;
+   height: 515px;
+   position: relative;
+   border: 1px solid #ddd;
+   background-color: whitesmoke;
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.carousel-wrapper {
+   width: 1000px;
+   height: 500px;
+
+   .slide-number {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      background-color: teal;
+      color: white;
+      padding: 5px 10px;
+      font-size: 22px;
+      border-radius: 7px;
+      z-index: 101;
+      user-select: none;
+   }
+
+   img {
+      opacity: 0;
+      z-index: 100;
+      position: absolute;
+      transition: opacity 1s ease-in-out;
+
+      &.active {
+         opacity: 1;
+      }
+   }
+}
+
+:is(.previous-slide, .next-slide) {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 102;
+   color: white;
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   cursor: pointer;
+   user-select: none;
+   background-color: teal;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   font-size: x-large;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode',
+               'Lucida Grande', 'Lucida Sans', Arial,
+               sans-serif;
+}
+
+.previous-slide {
+   left: 45px;
+}
+
+.next-slide {
+   right: 45px;
+}
+
+.previous-slide.disabled,
+.next-slide.disabled {
+   cursor: no-drop;
+   pointer-events: none;
+   background-color: rgba(0, 128, 128, 0.575);
+}
+
+.carousel-indicators {
+   position: absolute;
+   bottom: 45px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 101;
+}
+
+.carousel-indicators li {
+   display: inline-flex;
+   width: 22px;
+   height: 22px;
+   border-radius: 11px;
+   border: 2px solid teal;
+   background-color: transparent;
+   justify-content: center;
+   align-items: center;
+}
+
+.carousel-indicators li:not(:last-child) {
+   margin-right: 5px;
+}
+
+.carousel-indicators li:hover {
+   background-color: teal;
+   cursor: pointer;
+}
+
+.carousel-indicators li:is(.active) {
+   cursor: pointer;
+   background-color: teal;
+}
+
+.carousel-indicators li label {
+   cursor: pointer;
+   color: white;
+   user-select: none;
+}

@@ -56,13 +56,23 @@ $dark: $dark;
 $light: $light;
 
 $breakpoints: (
-  'xxs' : (max-width: 500px),
-  'xs'  : (min-width: 500px),
-  'sm'  : (min-width: 600px),
-  'md'  : (min-width: 700px),
-  'lg'  : (min-width: 1000px),
-  'xl'  : (min-width: 1200px),
-  'xxl' : (min-width: 1400px),
+  'xxs' : (min-width: 401px),
+  'xs'  : (min-width: 501px),
+  'sm'  : (min-width: 601px),
+  'md'  : (min-width: 801px),
+  'lg'  : (min-width: 1001px),
+  'xl'  : (min-width: 1201px),
+  'xxl' : (min-width: 1401px),
+);
+
+$max-breakpoints: (
+  'xxs' : (max-width: 400px),
+  'xs'  : (max-width: 500px),
+  'sm'  : (max-width: 600px),
+  'md'  : (max-width: 800px),
+  'lg'  : (max-width: 1000px),
+  'xl'  : (max-width: 1200px),
+  'xxl' : (max-width: 1400px),
 );
 
 $float-start: left;

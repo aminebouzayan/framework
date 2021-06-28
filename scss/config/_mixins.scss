@@ -18,6 +18,26 @@
       }
 }
 
+@mixin respond-down-to($breakpoint) {
+      $raw-query: map-get($max-breakpoints, $breakpoint);
+
+      @if $raw-query {
+            $query: if(
+                  type-of($raw-query) == 'string',
+                  unquote($raw-query),
+                  inspect($raw-query),
+            );
+
+            @media #{$query} {
+                  @content;
+            }
+      }
+      @else {
+            @error 'No value found for `#{breakpoint}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
+      }
+}
+
 @mixin countBorderRadius($radius) {
       -webkit-border-radius: $radius;
       -moz-border-radius: $radius;

@@ -1,0 +1,456 @@
+body {
+      font-family: "Poppins", sans-serif;
+}
+
+header {
+      top: 0;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      height: 3.4375rem;
+      background-color: $light;
+      box-shadow: 1px 5px 7px 3px rgba(0, 0, 0, 0.171);
+      z-index: 101;
+}
+
+.container {
+      margin: auto;
+      max-width: 78rem;
+      height: 3.4375rem;
+      display: flex;
+}
+
+.logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__img {
+            display: flex;
+            pointer-events: none;
+            user-select: none;
+      }
+}
+
+.nav {
+            flex: 2;
+
+            #{&}__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .nav__item {
+                  display: inline-flex;
+                  position: relative;
+                  line-height: 2.7;
+                  user-select: none;
+
+            .nav__link {
+                  color: $black;
+                  text-transform: capitalize;
+                  font-size: 1.25rem;
+                  font-weight: lighter;
+
+                  i {
+                        font-size: 0.68rem;
+                        font-weight: lighter;
+                  }
+            }
+
+            &:nth-last-child(3) {
+                  .nav__link {
+                        text-transform: uppercase;
+                  }
+            }
+
+            &--hvr {
+                  position: relative;
+            
+                  &::before {
+                        content: "";
+                        position: absolute;
+                        left: 51%;
+                        right: 51%;
+                        bottom: 0;
+                        background-color: $black;
+                        height: 2px;
+                        transition: all 300ms ease-out;
+                  }
+
+                  &:hover {
+                        &::before {
+                              left: 0;
+                              right: 0;
+                        }
+                  }
+                  }
+            }
+      }
+}
+
+      %dropdown-pattern {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            background-color: $light;
+            border-radius: 7px;
+            box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.25),
+                        -3px -3px 18px -4px rgba(0, 0, 0, 0.25);
+            transition: all 300ms ease;
+      }
+
+      nav .nav__wrapper .nav__item:hover > .dropdown,
+      .dropdown .dropdown__item:hover > .sub-dropdown {
+            transform: translate(0, 0);
+      }
+
+      %dropdown-item-pattern {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: block;
+      width: 222px;
+      padding: 3px 10px 3px 15px;
+      position: relative;
+      line-height: 2rem;
+      cursor: pointer;
+   }
+   
+   %dropdown-link-pattern {
+      font-size: 1rem;
+      transition: all 300ms ease-in;
+      position: relative;
+      text-transform: capitalize;
+      color: $black;
+      font-weight: normal;
+   }
+   
+   %icon-pattern {
+      content: "\f061";
+      color: $black;
+      opacity: 0;
+      transition: all 300ms ease-in;
+   }
+   
+   .dropdown {
+      top: 3.4375rem;
+      left: -7px;
+      @extend %dropdown-pattern;
+      transform: translateY(10px);
+      
+      #{&}__item {
+            @extend %dropdown-item-pattern;
+   
+            .dropdown__link {
+            @extend %dropdown-link-pattern;
+            }
+      }
+   
+      & > &__item:hover > &__link {
+            margin-left: 10px;
+      }
+   
+      & > &__item > &__link i::before {
+            margin-left: 10px;
+            @extend %icon-pattern;
+      }
+   
+      & > &__item:hover > &__link i::before {
+         margin-left: 15px;
+         content: "\f061";
+         opacity: 1;
+      }
+   }
+   
+   .sub-dropdown {
+      top: 0;
+      opacity: 0;
+      left: 222px;
+      @extend %dropdown-pattern;
+      transform: translateX(10px);
+   
+      #{&}__item {
+         @extend %dropdown-item-pattern;
+   
+         .sub-dropdown__link {
+            @extend %dropdown-link-pattern;
+         }
+      }
+   
+      & > &__item:hover > &__link {
+         margin-left: 10px;
+      }
+   
+      & > &__item > &__link i::before {
+         margin-left: 5px;
+         @extend %icon-pattern;
+      }
+   
+      & > &__item:hover > &__link i::before {
+         margin-left: 10px;
+         content: "\f061";
+         opacity: 1;
+      }
+   }
+   
+   label {
+      cursor: pointer;
+   }
+   
+   %do-not-display {
+      display: none;
+   }
+   
+   @for $i from 1 through 5 {
+      .check-#{$i} {
+         @extend %do-not-display;
+      }
+   }
+   
+   .search {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+   
+      &__button {
+         border: none;
+         background-color: transparent;
+         position: absolute;
+         top: 34%;
+         right: 23%;
+         cursor: pointer;
+   
+         i {
+            color: whitesmoke;
+         }
+      }
+   
+      &__input {
+         width: 150px;
+         height: 30px;
+         font-size: 0.87rem;
+         border: none;
+         text-indent: 3px;
+         background-color: $dark;
+         color: #fff;
+         border-radius: 50px;
+         padding: 10px 40px 5px 10px;
+         padding-top: 5px;
+         transition: all 30ms ease-in-out;
+         box-sizing: content-box;
+   
+         &:focus {
+            outline: none;
+            border: 2px solid $black;
+         }
+      }
+   }
+   
+   .check {
+      display: none;
+   }
+   
+   @include respond-to(md) {
+      nav .nav__wrapper .nav__item:hover > .dropdown,
+      .dropdown .dropdown__item:hover > .sub-dropdown {
+         opacity: 1;
+         visibility: visible;
+      }
+   
+      body {
+      overflow: hidden;
+      }
+   
+   }
+   
+   @include respond-down-to(md) {
+      .container {
+         position: relative;
+      }
+   
+      body {
+         overflow-x: hidden;
+      }
+   
+      .search {
+         display: none;
+      }
+   
+      .logo {
+         margin-left: 0.75rem;
+      }
+   
+      %hamburger-menu-pattern {
+         content: inherit;
+         width: inherit;
+         height: inherit;
+         border-radius: inherit;
+         transition: inherit;
+         background-color: $black;
+         position: absolute;
+      }
+   
+      .hamburger-menu {
+         display: flex;
+         flex: 1;
+         order: 2;
+         justify-content: right;
+         align-items: center;
+   
+         &__wrapper {
+            width: 35px;
+            height: 35px;
+            margin-right: 0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+   
+            div:empty {
+               content: "";
+               width: 27px;
+               height: 2px;
+               border-radius: 10px;
+               transition: all 400ms ease;
+               background-color: $black;
+               position: relative;
+   
+               &::before {
+                  transform: translateY(-7px);
+                  @extend %hamburger-menu-pattern;
+               }
+   
+               &::after {
+                  transform: translateY(7px);
+                  @extend %hamburger-menu-pattern;
+               }
+            }
+         }
+      }
+      .check {
+         position: absolute;
+         display: block;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 12px;
+         width: 35px;
+         height: 35px;
+         cursor: pointer;
+         z-index: 1001;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         appearance: none;
+   
+         &:checked ~ .hamburger-menu {
+               .hamburger-menu__wrapper {
+                  div:empty {
+                     background-color: transparent;
+   
+                     &::before {
+                        background-color: $black;
+                        transform: translateY(0) rotate(-45deg);
+                     }
+   
+                     &::after {
+                        background-color: $black;
+                        transform: translateY(0) rotate(45deg);
+                     }
+                  }
+               }
+         }
+      }
+   
+      .nav {
+         background: center / cover no-repeat url(./img/air-buds.jpeg);
+         width: 100%;
+         height: calc(100vh - 2.7rem);
+         position: fixed;
+         top: 3.5rem;
+         left: 100%;
+         overflow-y: visible !important;
+         overflow-x: hidden !important;
+         transition: all 400ms ease;
+   
+         #{&}__wrapper {
+            width: inherit;
+            height: inherit;
+            display: block;
+            
+            .nav__item {
+               display: block;
+               position: static;
+               width: 100%;
+               cursor: pointer;
+               text-indent: 22px;
+               min-height: 2.5rem;
+               margin: 0 !important;
+   
+               &--hvr:before {
+                  display: none;
+               }
+            }
+         }
+      }
+   
+      %dropdown-small-pattern {
+         opacity: initial;
+         visibility: initial; 
+         display: none;
+         position: initial;
+         background-color: transparent;
+         border-radius: 0;
+         box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.25),
+                     -3px -3px 18px -4px rgba(0, 0, 0, 0.25);
+         transition: all 300ms ease;
+         transform: translate(0, 0);
+      }
+   
+      %dropdown-item-small-pattern {
+         display: block;
+         width: 100%;
+         text-indent: 22px;
+         position: static;
+         cursor: pointer;
+      }
+   
+      .dropdown {
+         width: 95%;
+         margin: auto;
+         @extend %dropdown-small-pattern;
+   
+         &__item {
+            @extend %dropdown-item-small-pattern;
+         }
+      }
+   
+      .sub-dropdown {
+         @extend %dropdown-small-pattern;
+         
+         &__item {
+            @extend %dropdown-item-small-pattern;
+         }
+      }
+   
+      .check-1:checked ~ .dropdown,
+      .check-2:checked ~ .sub-dropdown,
+      .check-3:checked ~ .sub-dropdown,
+      .check-4:checked ~ .sub-dropdown,
+      .check-5:checked ~ .dropdown
+      {
+         display: block;
+      }
+   
+      .check:checked ~ .nav {
+         left: 0;
+      }
+   
+      @for $i from 1 through 2 {
+         .check-#{$i} {
+            display: none;
+         }
+      }
+   }
