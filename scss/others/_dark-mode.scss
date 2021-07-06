@@ -1,0 +1,20 @@
+.dark-mode-toggle {
+   position: fixed;
+   top: 10px;
+   right: 10px;
+   width:24px;
+   height:24px;
+   cursor: pointer;
+   color: #333;
+}
+
+body {
+   &.darkMode{
+      color: #f1f1f1;
+      background: #333;
+
+      .dark-mode-toggle {
+         color: wheat;
+      }
+   }
+}
