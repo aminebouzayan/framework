@@ -4,14 +4,14 @@
 */
 
 html {
-      cursor: default;
-      font-size: 16px;
-      tab-size: 4;
-      -o-tab-size: 4;
-      line-height: 1.5;
-      overflow-wrap: break-word;
-      -webkit-text-size-adjust: 100%;
-      -webkit-tap-highlight-color: transparent;
+  cursor: default;
+  font-size: 16px;
+  tab-size: 4;
+  -o-tab-size: 4;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /*
@@ -20,10 +20,10 @@ html {
 */
 
 body {
-      margin: 0;
-      block-size: stretch;
-      block-size: -moz-available;
-      block-size: -webkit-fill-available;
+  margin: 0;
+  block-size: stretch;
+  block-size: -moz-available;
+  block-size: -webkit-fill-available;
 }
 
 /*
@@ -32,9 +32,9 @@ body {
 */
 
 hr {
-      box-sizing: content-box;
-      height: 0;
-      overflow: visible;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
 }
 
 /*
@@ -42,7 +42,7 @@ hr {
 */
 
 a {
-      background-color: transparent;
+  background-color: transparent;
 }
 
 /*
@@ -51,9 +51,9 @@ a {
 */
 
 abbr[title] {
-      border-bottom: none;
-      text-decoration: underline;
-      text-decoration: underline dotted;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 /*
@@ -70,7 +70,7 @@ strong {
 */
 
 small {
-      font-size: 80%;
+  font-size: 80%;
 }
 
 /*
@@ -99,7 +99,7 @@ sup {
 */
 
 img {
-      border-style: none;
+  border-style: none;
 }
 
 /*
@@ -161,7 +161,7 @@ button:-moz-focusring,
 */
 
 fieldset {
-      padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /*
@@ -172,12 +172,12 @@ fieldset {
 */
 
 legend {
-      box-sizing: border-box;
-      color: inherit;
-      display: table;
-      max-width: 100%;
-      padding: 0;
-      white-space: normal;
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
 }
 
 /*
@@ -284,15 +284,18 @@ template {
  * 3. Remove the margin in Firefox and Safari.
 */
 
-button, input, select, textarea {
-      background-color: transparent;
-      border: 1px solid WindowFrame;
-      color: inherit;
-      font: inherit;
-      margin: 0;
-      line-height: 1.15;
-      letter-spacing: inherit;
-      padding: 0.25em 0.375em;
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid WindowFrame;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: inherit;
+  padding: 0.25em 0.375em;
 }
 
 /*
@@ -300,10 +303,11 @@ button, input, select, textarea {
 */
 
 select {
-      appearance: none;
-      background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E") no-repeat right center / 1em;
-      border-radius: 0;
-      padding-right: 1em;
+  appearance: none;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E")
+    no-repeat right center / 1em;
+  border-radius: 0;
+  padding-right: 1em;
 }
 
 /*
@@ -311,7 +315,7 @@ select {
 */
 
 select[multiple] {
-      background-image: none;
+  background-image: none;
 }
 
 /*
@@ -319,8 +323,8 @@ select[multiple] {
 */
 
 [type="color"] {
-      border-width: 0;
-      padding: 0;
+  border-width: 0;
+  padding: 0;
 }
 
 /*
@@ -333,8 +337,8 @@ input,
 video,
 select,
 textarea {
-      height: auto;
-      max-width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 /*
@@ -347,7 +351,7 @@ iframe,
 img,
 svg,
 video {
-      vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*
@@ -355,7 +359,7 @@ video {
 */
 
 iframe {
-      border-style: none;
+  border-style: none;
 }
 
 /*
@@ -364,7 +368,7 @@ iframe {
 
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
-   height: auto;
+  height: auto;
 }
 
 /*
@@ -372,8 +376,8 @@ iframe {
 */
 
 ::-webkit-input-placeholder {
-   color: inherit;
-   opacity: 0.54;
+  color: inherit;
+  opacity: 0.54;
 }
 
 /*
@@ -381,7 +385,7 @@ iframe {
 */
 
 ::-webkit-search-decoration {
-   -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 /*
@@ -390,8 +394,8 @@ iframe {
 */
 
 ::-webkit-file-upload-button {
-   -webkit-appearance: button; /* 1 */
-   font: inherit; /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*
@@ -399,22 +403,22 @@ iframe {
 */
 
 dialog {
-   background-color: white;
-   border: solid;
-   color: black;
-   height: -moz-fit-content;
-   height: fit-content;
-   left: 0;
-   margin: auto;
-   padding: 1em;
-   position: absolute;
-   right: 0;
-   width: -moz-fit-content;
-   width: fit-content;
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 dialog:not([open]) {
-   display: none;
+  display: none;
 }
 
 /*
@@ -422,7 +426,7 @@ dialog:not([open]) {
 */
 
 details > summary:first-of-type {
-   display: list-item;
+  display: list-item;
 }
 
 /*
@@ -430,5 +434,5 @@ details > summary:first-of-type {
 */
 
 [aria-controls] {
-   cursor: pointer;
- }
+  cursor: pointer;
+}

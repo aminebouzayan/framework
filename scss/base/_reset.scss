@@ -5,28 +5,27 @@
 }
 
 html:focus-within {
-      scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-      min-height: 100vh;
-      text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
 a:not([class]) {
-      text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img {
-      max-width: 100%;
-      display: block;
+  max-width: 100%;
+  display: block;
 }
-
 
 body,
 h1,
@@ -44,52 +43,56 @@ dd {
 }
 
 @media (prefers-reduced-motion: reduce) {
-      *,
-      ::before,
-      ::after {
-        animation-delay: -1ms !important;
-        animation-duration: 1ms !important;
-        animation-iteration-count: 1 !important;
-        background-attachment: initial !important;
-        scroll-behavior: auto !important;
-        transition-delay: 0s !important;
-        transition-duration: 0s !important;
-      }
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
 }
 
 table {
-      border-collapse: collapse;
-      table-layout: auto;
-	border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: auto;
+  border-spacing: 0;
 }
 
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
 caption {
-      caption-side: top;
-      font-weight: bold;
-      margin-top: 0;
-      text-align: left;
+  caption-side: top;
+  font-weight: bold;
+  margin-top: 0;
+  text-align: left;
 }
 
 figure {
-      max-width: 100%;
+  max-width: 100%;
 }
 
 figcaption {
-      font-size: .75em;
-      line-height: 2;
-      text-align: left;
+  font-size: 0.75em;
+  line-height: 2;
+  text-align: left;
 }

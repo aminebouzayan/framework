@@ -1,101 +1,101 @@
 body {
-      @extend %align-grid !optional;
+  @extend %align-grid !optional;
 }
 
 %template-of-button {
-      height: 2.5rem;
-      width: 9.375rem;
-      margin: 0 0 1rem 0;
-      line-height: 1.5rem;
-      padding: 0.312rem 0.625rem;
-      
-      cursor: pointer;
-      appearance: none;
-      user-select: none;
-      display: inline-block;
+  height: 2.5rem;
+  width: 9.375rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.5rem;
+  padding: 0.312rem 0.625rem;
 
-      overflow: hidden;
-      font-weight: normal;
-      font-size: 1.125rem;
-      font-family: Lato;
-      text-shadow: none;
-      text-align: center;
-      text-transform: none;
-      text-decoration: none;
-      vertical-align: middle;
+  cursor: pointer;
+  appearance: none;
+  user-select: none;
+  display: inline-block;
 
-      border: none;
-      border-radius: 3px;
+  overflow: hidden;
+  font-weight: normal;
+  font-size: 1.125rem;
+  font-family: Lato;
+  text-shadow: none;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  vertical-align: middle;
 
-      color: $light;
-      background-color: transparent;
+  border: none;
+  border-radius: 3px;
 
-      transition: all 30ms linear;
+  color: $light;
+  background-color: transparent;
+
+  transition: all 30ms linear;
 }
 
 .btn {
-      @extend %template-of-button;
+  @extend %template-of-button;
+  background-color: $link;
+
+  &:focus {
+    outline: 3px solid rgba(0, 76, 255, 0.397);
+  }
+
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--outline {
+    @extend %template-of-button;
+    color: $link;
+    border: 1px solid $link;
+    background-color: transparent;
+
+    &:hover {
+      color: txt-color($link);
       background-color: $link;
+    }
 
-      &:focus {
-            outline: 3px solid rgba(0, 76, 255, 0.397);
-      }
+    &:focus {
+      outline: 3px solid rgba(0, 76, 255, 0.397);
+    }
+  }
 
-      &:disabled,
-      &.disabled {
-            cursor: default;
-            pointer-events: none;
-            opacity: 0.5;
-            &:focus {
-                  outline: none
-            }
-      }
+  &--secondary {
+    @extend %template-of-button;
+    color: $dark;
+    background-color: $gray-500;
+    &:focus {
+      outline: 3px solid $gray-300;
+    }
+  }
 
-      &--outline {
-            @extend %template-of-button;
-            color: $link;
-            border: 1px solid $link;
-            background-color: transparent;
+  &--rounded {
+    @extend %template-of-button;
+    border-radius: 20px;
+    background-color: $link;
 
-            &:hover {
-                  color: txt-color($link);
-                  background-color: $link;
-            }
+    &:focus {
+      outline: 3px solid rgba(0, 76, 255, 0.397);
+    }
+  }
 
-            &:focus {
-            outline: 3px solid rgba(0, 76, 255, 0.397);
-            }
-      }
+  &--circular {
+    @extend %template-of-button;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: xx-large;
+    background-color: $link;
 
-      &--secondary {
-            @extend %template-of-button;
-            color: $dark;
-            background-color: $gray-500;
-            &:focus {
-                  outline: 3px solid $gray-300;
-            }
-      }
-
-      &--rounded {
-            @extend %template-of-button;
-            border-radius: 20px;
-            background-color: $link;
-
-            &:focus {
-                  outline: 3px solid rgba(0, 76, 255, 0.397);
-            }
-      }
-
-      &--circular {
-            @extend %template-of-button;
-            width:50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: xx-large;
-            background-color: $link;
-
-            &:focus {
-                  outline: 3px solid rgba(0, 76, 255, 0.397);
-            }
-      }
+    &:focus {
+      outline: 3px solid rgba(0, 76, 255, 0.397);
+    }
+  }
 }
